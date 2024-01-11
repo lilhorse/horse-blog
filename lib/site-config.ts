@@ -18,6 +18,9 @@ export interface SiteConfig {
   zhihu?: string
   mastodon?: string;
 
+  customHeaderLogo?: string | null
+  customHeaderLogoDark?: string | null
+
   defaultPageIcon?: string | null
   defaultPageCover?: string | null
   defaultPageCoverPosition?: number | null

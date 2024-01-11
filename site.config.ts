@@ -24,6 +24,10 @@ export default siteConfig({
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
+  // Custom logo - this will replace the breadcrumbs - Feature requires navigationStyle: 'custom'
+  customHeaderLogo: '/logo.png',
+  // customHeaderLogoDark: 'https://transitivebullsh.it/logo-dark.png', // optional
+
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
   defaultPageIcon: null,
@@ -50,16 +54,16 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  // navigationStyle: 'default'
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'About',
+      pageId: '055e368444314f2f953c65a79982553c'
+    },
+    {
+      title: 'Contact',
+      pageId: '47088e3f3cb448acb439045cbcf61680'
+    }
+  ]
 })

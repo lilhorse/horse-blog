@@ -62,6 +62,16 @@ export const linkedin: string | null = getSiteConfig('linkedin', null)
 export const newsletter: string | null = getSiteConfig('newsletter', null)
 export const zhihu: string | null = getSiteConfig('zhihu', null)
 
+// default logo values
+export const customHeaderLogo: string | null = getSiteConfig(
+  'customHeaderLogo',
+  null
+)
+export const customHeaderLogoDark: string | null = getSiteConfig(
+  'customHeaderLogoDark',
+  null
+)
+
 export const getMastodonHandle = (): string | null => {
   if (!mastodon) {
     return null
