@@ -64,6 +64,10 @@ export default siteConfig({
     {
       title: 'Contact',
       pageId: '47088e3f3cb448acb439045cbcf61680'
+    },
+    {
+      title: 'RSS',
+      url: '/feed',
     }
   ]
 })
