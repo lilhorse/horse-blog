@@ -239,7 +239,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     comments = (
       <Giscus
         id="giscus-comments"
-        repo="lilhorse/horse-blog"
+        repo="lilhorse/lil.horse"
         repoId="R_kgDOGbvmeg"
         category="Announcements"
         categoryId="DIC_kwDOGbvmes4CcjmH"
