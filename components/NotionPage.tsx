@@ -250,6 +250,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         theme={isDarkMode ? 'noborder_dark' : 'noborder_light'}
         lang="en"
         loading="lazy"
+        strict="1"
       />
     )
   }
