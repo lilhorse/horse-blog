@@ -19,6 +19,8 @@ import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
 import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
+import Giscus from '@giscus/react';
+
 import { Footer } from './Footer'
 // import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
@@ -231,10 +233,31 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const canonicalPageUrl =
     !config.isDev && getCanonicalPageUrl(site, recordMap)(pageId)
 
+  let comments: React.ReactNode = null
+
+  if (block.type === 'page' && block.parent_table === 'collection') {
+    comments = (
+      <Giscus
+        id="comments"
+        repo="lilhorse/horse-blog"
+        repoId="R_kgDOGbvmeg"
+        category="Announcements"
+        categoryId="DIC_kwDOGbvmes4CcjmH"
+        mapping="pathname"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="top"
+        theme={isDarkMode ? 'noborder_dark' : 'noborder_light'}
+        lang="en"
+        loading="lazy"
+      />
+    )
+  }
+
   const socialImage = mapImageUrl(
     getPageProperty<string>('Social Image', block, recordMap) ||
-      (block as PageBlock).format?.page_cover ||
-      config.defaultPageCover,
+    (block as PageBlock).format?.page_cover ||
+    config.defaultPageCover,
     block
   )
 
@@ -278,6 +301,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
+        pageFooter={comments}
         footer={footer}
       />
 
