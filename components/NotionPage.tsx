@@ -238,7 +238,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   if (block.type === 'page' && block.parent_table === 'collection') {
     comments = (
       <Giscus
-        id="comments"
+        id="giscus-comments"
         repo="lilhorse/horse-blog"
         repoId="R_kgDOGbvmeg"
         category="Announcements"

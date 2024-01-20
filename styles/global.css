@@ -60,3 +60,7 @@ body {
 ::-webkit-scrollbar-track {           
     background-color: var(--bg-color);
 }
+
+#giscus-comments {
+  margin-top: 2em;
+}
